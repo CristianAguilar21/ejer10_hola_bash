@@ -1,0 +1,15 @@
+name: Mostrar hola
+on: 
+  push:
+    branch: [ main ]
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout del repositorio
+      uses: actions/checkout@v3
+    - name: Dar permisos de ejecución
+      run: chmod +x ./src/script.sh
+    - name: Ejecutar script
+      run: ./src/script.sh
+  
